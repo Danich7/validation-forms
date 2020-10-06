@@ -1,0 +1,477 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url("../fonts/ubuntulight.woff2") format("woff2"), url("../fonts/ubuntulight.woff") format("woff"), url("../fonts/ubuntulight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local("Ubuntu"), url("../fonts/ubuntu.woff2") format("woff2"), url("../fonts/ubuntu.woff") format("woff"), url("../fonts/ubuntu.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local("Ubuntu Italic"), local("Ubuntu-Italic"), url("../fonts/ubuntuitalic.woff2") format("woff2"), url("../fonts/ubuntuitalic.woff") format("woff"), url("../fonts/ubuntuitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local("Ubuntu Medium"), local("Ubuntu-Medium"), url("../fonts/ubuntumedium.woff2") format("woff2"), url("../fonts/ubuntumedium.woff") format("woff"), url("../fonts/ubuntumedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url("../fonts/ubuntubold.woff2") format("woff2"), url("../fonts/ubuntubold.woff") format("woff"), url("../fonts/ubuntubold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff"), url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body, * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content {
+  padding-top: 50px;
+}
+
+.content__container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.header__title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.header__text {
+  font-family: Ubuntu;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  margin-bottom: 32px;
+}
+
+.header__text::before {
+  content: '';
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: -20px;
+  top: 9px;
+  height: 2px;
+  width: 16px;
+  background: #F19932;
+  border-radius: 2px;
+}
+
+.info__title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+}
+
+.info__alert {
+  display: none;
+}
+
+.alert__color {
+  margin-left: -6%;
+  background: rgba(251, 217, 44, 0.16);
+  border-radius: 0px 4px 4px 0px;
+  width: 37%;
+  height: 90px;
+  position: absolute;
+}
+
+.alert__block {
+  width: 31%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.alert__block-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.alert__title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.alert__text {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 11px;
+  color: #333333;
+}
+
+.alert__img {
+  padding-right: 20px;
+}
+
+.forms__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.forms__text:first-child {
+  margin-bottom: 37px;
+}
+
+.forms__text-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: 50px;
+  border-radius: 2px;
+  border: none;
+}
+
+.forms__text-name {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: block;
+  position: absolute;
+  padding-top: 8px;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+.forms__text-form {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  border: none;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  padding-top: 25px;
+  background: #F8F7FA;
+}
+
+.forms__text-form:focus {
+  background: #FFFFFF;
+  outline: none;
+  border: 2px solid rgba(47, 128, 237, 0.75);
+  border-radius: 2px;
+}
+
+.forms__text-form::-webkit-input-placeholder {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.forms__text-form:-ms-input-placeholder {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.forms__text-form::-ms-input-placeholder {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.forms__text-form::placeholder {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.forms__text-error {
+  padding-left: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #800404;
+  background: #F5BCBC;
+  border-radius: 0px 0px 2px 2px;
+  display: none;
+}
+
+.forms__textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.forms__textarea:last-child {
+  margin-bottom: 32px;
+}
+
+.textarea {
+  line-height: 18px;
+  resize: vertical;
+  min-height: 140px;
+  max-height: 300px;
+}
+
+.forms__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  width: 29%;
+}
+
+.forms__checkbox:hover {
+  background: rgba(47, 128, 237, 0.05);
+}
+
+.forms__checkbox-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 8px;
+  color: #182C40;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.forms__checkbox-name:hover {
+  cursor: pointer;
+}
+
+.forms__submit {
+  background: #236ACB;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 15px 20px;
+  margin-right: 20px;
+}
+
+.forms__submit:hover {
+  background: #2974D9;
+}
+
+.forms__submit:focus {
+  border: 2px solid rgba(47, 128, 237, 0.5);
+}
+
+.forms__submit:active {
+  background: #236ACB;
+}
+
+.forms__reset {
+  background: #E9E9E9;
+  border-radius: 2px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  padding: 15px 20px;
+  margin-right: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.forms__reset:hover {
+  background: #DBDBDB;
+}
+
+.forms__reset:focus {
+  border: 2px solid #DBDBDB;
+}
+
+.forms__reset:active {
+  background: #C4C4C4;
+}
+
+.forms__save {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  position: absolute;
+  right: 0;
+  background: #C4C4C4;
+}
+
+.forms__save:hover {
+  background: #DBDBDB;
+}
+
+.forms__save:focus {
+  border: 2px solid #DBDBDB;
+}
+
+.forms__save:active {
+  background: #C4C4C4;
+}
+
+.forms__text-form:focus ~ label {
+  color: #2F80ED;
+}
+
+.forms__text-form:not(:focus):not(:placeholder-shown) ~ label {
+  opacity: 0.5;
+}
+
+#alias:invalid:not(:placeholder-shown) {
+  border: 2px solid #F5BCBC;
+  border-border-radius: 2px;
+}
+
+#alias:invalid:not(:placeholder-shown) ~ .forms__text-error {
+  display: block;
+}
+
+#alias:invalid:not(:placeholder-shown) ~ label {
+  color: #F64C4C;
+  opacity: 1;
+}
+
+@-webkit-keyframes rotateInDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+            transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownRight {
+  from {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+            transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+          animation-name: rotateInDownRight;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}

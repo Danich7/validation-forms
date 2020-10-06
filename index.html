@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Профиль рабочей группы</title>
+  </head>
+  <body>
+    <main class="content">
+      <div class="content__container">
+        <section class="content__header">
+          <h1 class="header__title">Профиль рабочей группы</h1>
+          <p class="header__text">В данном разделе вы можете посмотреть и отредактировать информацию по своей рабочей группе, настроить права участников, расшарить настройки полностью или частично для других рабочих групп, а также сделать полную копию вашей рабочей группы с ограниченным доступом для тонкой настройки без публичных оповещений.</p>
+        </section>
+        <section class="content__info">
+          <h2 class="info__title">Основная информация</h2>
+          <article class="info__alert animated rotateInDownRight"> 
+            <div class="alert__color"></div>
+            <div class="alert__block">
+              <div class="alert__block-text">
+                <h2 class="alert__title">Внимание!</h2>
+                <p class="alert__text">Ваши данные сохранены в браузере, но не отправлены на сервер. <br> Нажмите кнопку “Отправить”, чтобы завершить редактирование.</p>
+              </div><img class="alert__img" src="img/alert.svg" alt="alert"/>
+            </div>
+          </article>
+          <form class="info__forms" action="#">
+            <div class="forms__text">
+              <div class="forms__text-item">
+                <input class="forms__text-form" id="group" type="text" name="group" autocomplete="on" required="required" placeholder="Введите полное название группы"/>
+                <label class="forms__text-name" for="group">Название группы</label>
+              </div>
+              <div class="forms__text-item">
+                <input class="forms__text-form" id="alias" type="text" name="alias" pattern="^[a-zA-Z]+$" autocomplete="on" required="required" placeholder="Введите алиас"/>
+                <label class="forms__text-name" id="label" for="alias">Алиас</label><span class="forms__text-error">Алиас не может содержать русские буквы и пробелы</span>
+              </div>
+              <div class="forms__text-item">
+                <input class="forms__text-form" id="mail" type="email" name="mail" autocomplete="on" required="required" placeholder="Введите электронную почту"/>
+                <label class="forms__text-name" for="mail">Электронная почта для обращений</label>
+              </div>
+            </div>
+            <div class="forms__text">
+              <div class="forms__text-item">
+                <input class="forms__text-form" id="phone" type="tel" name="phone" autocomplete="on" required="required" placeholder="+7 (XXX) XXX-XX-XX"/>
+                <label class="forms__text-name" for="phone">Телефон представителя</label>
+              </div>
+              <div class="forms__text-item">
+                <input class="forms__text-form" id="name" type="text" name="name" autocomplete="on" required="required" placeholder="Введите полные данные представителя"/>
+                <label class="forms__text-name" for="name">ФИО представителя</label>
+              </div>
+              <div class="forms__text-item">
+                <input class="forms__text-form" id="position" type="text" name="position" autocomplete="on" required="required" placeholder="Введите полное наименование должности"/>
+                <label class="forms__text-name" for="position">Должность ответственного</label>
+              </div>
+            </div>
+            <div class="forms__textarea">
+              <textarea class="forms__text-form textarea" id="description" name="description" rows="6" required="required" placeholder="Введите полное описание рабочей группы"></textarea>
+              <label class="forms__text-name" for="description">Описание рабочей группы для внутреннего использования</label>
+            </div>
+            <div class="forms__checkbox">
+              <label class="forms__checkbox-name" for="different">Публичное описание отличается от внутреннего</label>
+              <input class="forms__checkbox-item" id="different" type="checkbox" name="different"/>
+            </div>
+            <div class="forms__textarea">
+              <textarea class="forms__text-form textarea" id="public_description" name="public_description" rows="6" required="required" placeholder="Введите краткое и емкое описание"></textarea>
+              <label class="forms__text-name" for="public_description">Публичное описание рабочей группы</label>
+            </div>
+            <input class="forms__submit" type="submit" value="Отправить на модерацию"/>
+            <input class="forms__reset" type="reset" value="Отмена"/>
+            <input class="forms__save" type="button" value="Сохранить в мои черновики" onclick="window.location.reload()"/>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

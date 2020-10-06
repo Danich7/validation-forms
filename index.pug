@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/normalize.css")
+    link(rel="stylesheet", href="css/style.css")
+    title Профиль рабочей группы
+  body
+    main.content
+      .content__container
+        section.content__header
+          h1.header__title Профиль рабочей группы
+          p.header__text В данном разделе вы можете посмотреть и отредактировать информацию по своей рабочей группе, настроить права участников, расшарить настройки полностью или частично для других рабочих групп, а также сделать полную копию вашей рабочей группы с ограниченным доступом для тонкой настройки без публичных оповещений.
+        section.content__info
+          h2.info__title Основная информация
+          article.info__alert.animated.rotateInDownRight 
+            .alert__color
+            .alert__block
+              .alert__block-text
+                h2.alert__title Внимание!
+                p.alert__text Ваши данные сохранены в браузере, но не отправлены на сервер. <br> Нажмите кнопку “Отправить”, чтобы завершить редактирование.
+              img.alert__img(src="img/alert.svg", alt="alert")
+          form.info__forms(action="#")
+            .forms__text
+              .forms__text-item
+                input.forms__text-form#group(type="text", name="group", autocomplete="on", required, placeholder="Введите полное название группы")
+                label.forms__text-name(for="group") Название группы
+              .forms__text-item
+                input.forms__text-form#alias(type="text", name="alias", pattern="^[a-zA-Z]+$", autocomplete="on", required, placeholder="Введите алиас")
+                label.forms__text-name#label(for="alias") Алиас
+                span.forms__text-error Алиас не может содержать русские буквы и пробелы
+              .forms__text-item
+                input.forms__text-form#mail(type="email", name="mail", autocomplete="on", required, placeholder="Введите электронную почту")
+                label.forms__text-name(for="mail") Электронная почта для обращений
+            .forms__text
+              .forms__text-item
+                input.forms__text-form#phone(type="tel", name="phone", autocomplete="on", required, placeholder="+7 (XXX) XXX-XX-XX")
+                label.forms__text-name(for="phone") Телефон представителя
+              .forms__text-item
+                input.forms__text-form#name(type="text", name="name", autocomplete="on", required, placeholder="Введите полные данные представителя")
+                label.forms__text-name(for="name") ФИО представителя
+              .forms__text-item
+                input.forms__text-form#position(type="text", name="position", autocomplete="on", required, placeholder="Введите полное наименование должности")
+                label.forms__text-name(for="position") Должность ответственного
+            .forms__textarea
+              textarea.forms__text-form.textarea#description(name="description", rows="6", required, placeholder="Введите полное описание рабочей группы")
+              label.forms__text-name(for="description") Описание рабочей группы для внутреннего использования
+            .forms__checkbox
+              label.forms__checkbox-name(for="different") Публичное описание отличается от внутреннего
+              input.forms__checkbox-item#different(type="checkbox", name="different")
+            .forms__textarea
+              textarea.forms__text-form.textarea#public_description(name="public_description", rows="6", required, placeholder="Введите краткое и емкое описание")
+              label.forms__text-name(for="public_description") Публичное описание рабочей группы
+            input.forms__submit(type="submit", value="Отправить на модерацию")
+            input.forms__reset(type="reset", value="Отмена")
+            input.forms__save(type="button", value="Сохранить в мои черновики", onclick='window.location.reload()')
+    script(src="https://unpkg.com/imask")
+    script(src="js/script.js")
